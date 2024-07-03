@@ -1,0 +1,285 @@
+/* Reset default margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Define default font family */
+}
+
+/* Styles for the whole app */
+.app {
+  background-color: #f5f5f5; /* Set background color */
+}
+
+/* Styles for the navigation bar */
+nav {
+  background-color: #333; /* Set background color */
+  color: #fff; /* Set text color */
+  position: sticky; /* Stick navigation to the top */
+  z-index: 1000; /* Set stacking order */
+  top: 0; /* Position at the top */
+}
+
+/* Styles for the navigation list */
+ul {
+  list-style-type: none; /* Remove default list style */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Use flexbox */
+  justify-content: flex-start; /* Align items to the start */
+  align-items: center; /* Align items vertically */
+  margin-right: 30px; /* Add margin to the right */
+}
+
+/* Styles for list items */
+li {
+  margin-left: 20px; /* Add space between items */
+  font-size: 18px; /* Set font size */
+  padding-right: 50px; /* Add padding to the right */
+}
+
+/* Styles for the navbar logo image */
+.navbarImage {
+  width: 280px; /* Set width */
+  height: 90px; /* Set height */
+  margin-right: auto; /* Auto margin on the right */
+}
+
+/* Styles for the background image section */
+.background-image {
+  background-image: url("./assets/background.jpg"); /* Set background image */
+  background-size: cover; /* Cover background */
+  height: 500px; /* Set height */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange items in a column */
+  justify-content: space-around; /* Space around items */
+  align-items: center; /* Align items horizontally */
+  color: white; /* Set text color */
+  padding: 20px; /* Add padding */
+}
+
+/* Styles for the text row within the background image section */
+.text-row {
+  font-size: 24px; /* Set font size */
+  font-weight: bold; /* Set font weight */
+  margin-left: 700px; /* Set margin */
+  margin-top: 80px; /* Set margin */
+  color: beige; /* Set text color */
+}
+
+/* Styles for the search bar */
+.search-bar input {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-left: 450px; /* Set margin */
+  margin-bottom: 180px; /* Set margin */
+  background-color: antiquewhite; /* Set background color */
+  border-radius: 25rem; /* Set border radius */
+  color: black; /* Set text color */
+  font-size: large; /* Set font size */
+  border: none; /* Remove border */
+  padding: 15px; /* Add padding */
+  width: 350px; /* Set width */
+}
+
+/* Styles for the search input on focus */
+.search-bar input:focus {
+  outline: none; /* Remove outline */
+}
+
+/* Styles for the search input placeholder */
+.search-bar input::placeholder {
+  font-size: 14px; /* Set font size */
+}
+
+/* Styles for the card layout */
+.card-layout {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(6, 1fr); /* Define grid columns */
+  grid-gap: 20px; /* Set gap between grid items */
+  margin-top: 50px; /* Set margin */
+  margin-left: 20px; /* Set margin */
+}
+
+/* Styles for individual cards */
+.card {
+  border: 1px solid transparent; /* Remove border */
+  border-radius: 5px; /* Set border radius */
+  overflow: hidden; /* Hide overflow */
+  margin-left: 20px; /* Set margin */
+}
+
+/* Styles for book cards */
+.bookCard {
+  transition: width 0.3s ease; /* Add transition effect */
+  background-color: #fff; /* Set background color */
+  border-radius: 8px; /* Set border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0.1); /* Add shadow */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange items in a column */
+  position: relative; /* Set position */
+}
+
+/* Styles for book cards on hover */
+.bookCard:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Styles for card images */
+.cardImage img {
+  margin-top: 10px; /* Set margin */
+  width: 100%; /* Set width */
+  height: 100%; /* Set height */
+}
+
+/* Styles for card content */
+.card-content {
+  padding: 10px; /* Add padding */
+  text-align: center; /* Center text */
+}
+
+/* Styles for like icon */
+.bookCard .likeIcon {
+  height: 25px; /* Set height */
+  width: 25px; /* Set width */
+}
+
+/* Styles for book popup overlay */
+.book-popup-overlay {
+  position: fixed; /* Set position */
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left */
+  width: 100%; /* Set width */
+  height: 100%; /* Set height */
+  background-color: rgba(0, 0, 0, 0.5); /* Set background color with opacity */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  z-index: 9999; /* Set stacking order */
+}
+
+/* Styles for book popup */
+.book-popup {
+  background-color: #fff; /* Set background color */
+  padding: 20px; /* Add padding */
+  border-radius: 5px; /* Set border radius */
+  max-width: 80%; /* Set maximum width */
+  overflow: auto; /* Enable overflow */
+}
+
+/* Styles for close button */
+.close-btn {
+  position: absolute; /* Set position */
+  top: 10px; /* Set position from the top */
+  right: 10px; /* Set position from the right */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Set cursor */
+}
+
+/* Styles for book details */
+.book-details {
+  padding: 10px; /* Add padding */
+}
+
+/* Styles for book details headings */
+.book-details h2 {
+  margin-top: 0; /* Remove top margin */
+}
+
+.book-details h3 {
+  margin-top: 5px; /* Set top margin */
+  color: #666; /* Set text color */
+}
+
+/* Styles for book details paragraphs */
+.book-details p {
+  margin: 10px 0; /* Set margin */
+}
+
+/* Styles for footer */
+.footer {
+  background-color: #333; /* Set background color */
+  color: #fff; /* Set text color */
+  padding: 20px 0; /* Add padding */
+}
+
+/* Styles for footer container */
+.footer .container {
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space items evenly */
+}
+
+/* Styles for footer heading */
+.footer .footer-heading {
+  font-size: 18px; /* Set font size */
+  margin-bottom: 15px; /* Set bottom margin */
+}
+
+/* Styles for footer paragraphs */
+.footer p {
+  font-size: 14px; /* Set font size */
+  line-height: 1.6; /* Set line height */
+}
+
+/* Styles for contact information */
+.footer .contact span {
+  display: block; /* Display as block */
+  margin-bottom: 10px; /* Set bottom margin */
+}
+
+/* Styles for footer bottom section */
+.footer-bottom {
+  background-color: #222; /* Set background color */
+  text-align: center; /* Center text */
+  padding: 10px 0; /* Add padding */
+  font-size: 14px; /* Set font size */
+}
+
+/* Styles for anchor tags */
+a {
+  text-decoration: none; /* Remove underline */
+}
+
+/* Styles for anchor tags in normal state */
+a:link {
+  color: #fff; /* Set text color */
+}
+
+/* Styles for anchor tags in visited state */
+a:visited {
+  color: antiquewhite; /* Set text color */
+}
+
+/* Styles for anchor tags on hover */
+a:hover {
+  color: bisque;
+}
+
+.book-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 20px;
+}
+
+.sortBookDropDown {
+  display: flex;
+  gap: 20px;
+}
+
+/* Style for individual dropdowns */
+.sortBookDropDown select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: antiquewhite;
+  cursor: pointer;
+}
+
+/* Style for dropdown options */
+.sortBookDropDown select option {
+  font-size: 16px;
+}
